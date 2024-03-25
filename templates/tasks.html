@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table style="border-collapse: collapse">
+      <tr>
+        <td style="border: 1px solid blue; padding: 5px">task_id</td>
+        <td style="border: 1px solid blue; padding: 5px">name</td>
+      </tr>
+      {% for task in tasks %}
+      <tr style="border: 1px solid blue; padding: 5px">
+        {{ task.id }}
+      </tr>
+      <tr style="border: 1px solid blue; padding: 5px">
+        {{ task.name }}
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/new_task/">Create task</a>
+  </body>
+</html>
